@@ -4,6 +4,7 @@ export const getPost = (state, id) => state.posts[id]
 
 export const getPosts = state => Object.values(state.posts)
   .filter(post => post.deleted === false)
+  .filter(post => post.notFound !== true)
   .sort((a, b) => a[state.postsOrder] < b[state.postsOrder])
 
 export const getPostsByCategory = (state, category) => getPosts(state)

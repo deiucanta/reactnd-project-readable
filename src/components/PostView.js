@@ -59,7 +59,10 @@ class PostView extends React.Component {
   render() {
     const { post, comments, currentComment } = this.props
 
-    return post === undefined ? null : (
+    if (post === undefined) return null
+    if (post.notFound) return <div>404: not found</div>
+
+    return (
       <div>
         <h1>{post.title}</h1>
         <ul>

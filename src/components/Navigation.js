@@ -22,7 +22,7 @@ class Navigation extends React.Component {
         <li className="divider"></li>
         {categories.map(category => (
           <li key={category.name}>
-            <Link to={`/categories/${category.path}`}>{capitalize(category.name)}</Link>
+            <Link to={`/${category.path}`}>{capitalize(category.name)}</Link>
           </li>
         ))}
       </ul>

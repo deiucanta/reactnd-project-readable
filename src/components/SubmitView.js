@@ -7,7 +7,7 @@ import CreatePostForm from './CreatePostForm'
 
 const SubmitView = ({ categories, createPost, history }) => (
   <CreatePostForm categories={categories} onSubmit={data => {
-    createPost(data).then(post => history.push(`/posts/${post.id}`))
+    createPost(data).then(post => history.push(`/${post.category}/${post.id}`))
   }} />
 )
 

@@ -8,7 +8,7 @@ const PostsList = ({ posts }) => (
   <ol>
     {posts.map(post => (
       <li key={post.id}>
-        <Link to={`/posts/${post.id}`}>{post.title}</Link>
+        <Link to={`/${post.category}/${post.id}`}>{post.title}</Link>
         <ul>
           <li>Score: {post.voteScore}</li>
           <li>Comments <PostCommentsCount postId={post.id} /></li>
